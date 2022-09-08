@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="4.929">
-    <testcase classname="Validation of get method for categories catalogue" name="Send a valid Request to get Categories details" time="4.714">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="4.861">
+    <testcase classname="Validation of get method for categories catalogue" name="Send a valid Request to get Categories details for id 6327" time="4.634">
         <system-out><![CDATA[Given I send a request to the URL to get categories details.................passed
 When the response status is 200.............................................passed
-Then the response will return name Carbon credits,canRelist true and description Good position in category.passed
+And the response must return name tag Carbon credits........................passed
+And the response must return boolean value true.............................passed
+Then the response must return category description Good position in category.passed
 ]]></system-out>
     </testcase>
 </testsuite>

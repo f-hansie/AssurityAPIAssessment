@@ -3,17 +3,17 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-09-08T17:51:17.080Z",
-        "line": 12,
-        "name": "Send a valid Request to get Categories details",
+        "start_timestamp": "2022-09-08T20:11:22.909Z",
+        "line": 14,
+        "name": "Send a valid Request to get Categories details for id 6327",
         "description": "",
-        "id": "validation-of-get-method-for-categories-catalogue;send-a-valid-request-to-get-categories-details;;2",
+        "id": "validation-of-get-method-for-categories-catalogue;send-a-valid-request-to-get-categories-details-for-id-6327;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3882575000,
+              "duration": 3748849000,
               "status": "passed"
             },
             "line": 6,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 60622000,
+              "duration": 46689000,
               "status": "passed"
             },
             "line": 7,
@@ -43,27 +43,55 @@
           },
           {
             "result": {
-              "duration": 653542000,
+              "duration": 684467000,
               "status": "passed"
             },
             "line": 8,
-            "name": "the response will return name Carbon credits,canRelist true and description Good position in category",
+            "name": "the response must return name tag Carbon credits",
             "match": {
               "arguments": [
                 {
                   "val": "Carbon credits",
-                  "offset": 30
-                },
-                {
-                  "val": "true",
-                  "offset": 55
-                },
-                {
-                  "val": "Good position in category",
-                  "offset": 76
+                  "offset": 34
                 }
               ],
-              "location": "StepDefination.getCategoryDetailsTest.the_response_will_return_name_can_relist_true_and_description(java.lang.String,boolean,java.lang.String)"
+              "location": "StepDefination.getCategoryDetailsTest.the_response_must_return_name_tag_carbon_credits(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18180000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the response must return boolean value true",
+            "match": {
+              "arguments": [
+                {
+                  "val": "true",
+                  "offset": 39
+                }
+              ],
+              "location": "StepDefination.getCategoryDetailsTest.the_response_must_return_boolean_value_true(boolean)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17301000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the response must return category description Good position in category",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Good position in category",
+                  "offset": 46
+                }
+              ],
+              "location": "StepDefination.getCategoryDetailsTest.the_response_must_return_category_description_good_position_in_category(java.lang.String)"
             },
             "keyword": "Then "
           }

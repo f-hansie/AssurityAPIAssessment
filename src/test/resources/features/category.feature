@@ -5,7 +5,9 @@ Feature: Validation of get method for categories catalogue
 
     Given I send a request to the URL to get categories details
     When the response status is 200
-    Then the response will return name <name>,canRelist <canRelist> and description <description>
+    And the response must return name tag <name>
+    And the response must return boolean value <canRelist>
+    Then the response must return category description <description>
 
     Examples:
       | name           | description               | canRelist |

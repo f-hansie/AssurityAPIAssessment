@@ -40,22 +40,37 @@ public class getCategoryDetailsTest {
 
     }
 
+    @When("the response must return name tag (.*)$")
+    public void the_response_must_return_name_tag_carbon_credits(String name) throws Exception {
 
-    @Then("the response will return name (.*),canRelist (.*) and description (.*)$")
-    public void the_response_will_return_name_can_relist_true_and_description(String name, boolean canRelist, String description) throws Exception{
+        try {
+            // validate Name value
+            validatableResponse.assertThat().body("Name",equalTo(name));
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
 
-     try{
+    }
 
-         // validate Name value
-         validatableResponse.assertThat().body("Name",equalTo(name));
-         // validate CanRelist value
-         validatableResponse.assertThat().body("CanRelist",equalTo(canRelist));
-         //validate description value
-         validatableResponse.assertThat().body(containsStringIgnoringCase(description));
-     } catch (Exception e){
+    @When("the response must return boolean value (.*)$")
+    public void the_response_must_return_boolean_value_true(boolean canRelist) throws Exception {
 
-         throw new Exception(e.getMessage());
-     }
+        try {
+            // validate CanRelist value
+            validatableResponse.assertThat().body("CanRelist",equalTo(canRelist));
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
 
+    }
+    @Then("the response must return category description (.*)$")
+    public void the_response_must_return_category_description_good_position_in_category(String description) throws Exception{
+
+        try {
+            //validate description value
+            validatableResponse.assertThat().body(containsStringIgnoringCase(description));
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
     }
 }
