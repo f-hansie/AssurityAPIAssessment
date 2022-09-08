@@ -1,19 +1,19 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-09-08T12:18:38.872Z",
+        "start_timestamp": "2022-09-08T17:51:17.080Z",
         "line": 12,
         "name": "Send a valid Request to get Categories details",
         "description": "",
-        "id": "validation-of-get-method;send-a-valid-request-to-get-categories-details;;2",
+        "id": "validation-of-get-method-for-categories-catalogue;send-a-valid-request-to-get-categories-details;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3040577000,
+              "duration": 3882575000,
               "status": "passed"
             },
             "line": 6,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 47525000,
+              "duration": 60622000,
               "status": "passed"
             },
             "line": 7,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 751321000,
+              "duration": 653542000,
               "status": "passed"
             },
             "line": 8,
@@ -70,16 +70,25 @@
         ],
         "tags": [
           {
-            "name": "@GetUserDetails"
+            "name": "@category_details_for_catalogue"
           }
         ]
       }
     ],
-    "name": "Validation of get method",
+    "name": "Validation of get method for categories catalogue",
     "description": "",
-    "id": "validation-of-get-method",
+    "id": "validation-of-get-method-for-categories-catalogue",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/category.feature",
-    "tags": []
+    "tags": [
+      {
+        "name": "@category_details_for_catalogue",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

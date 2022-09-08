@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(features= {"src/test/resources"}, glue= {"StepDefination"},
 plugin = {"pretty","html:target/cucumber-report","json:target/cucumber.json","junit:target/cucumber.xml"},
-monochrome = true)
+monochrome = true,
+tags = "@category_details_for_catalogue")
 
 public class CucumberRunnerTest {
 

@@ -1,6 +1,6 @@
-Feature: Validation of get method
+@category_details_for_catalogue
+Feature: Validation of get method for categories catalogue
 
-  @GetUserDetails
   Scenario Outline: Send a valid Request to get Categories details
 
     Given I send a request to the URL to get categories details
