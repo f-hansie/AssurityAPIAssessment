@@ -8,8 +8,7 @@ import io.restassured.response.ValidatableResponse;
 import org.hamcrest.Matcher;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.equalToObject;
+import static org.hamcrest.CoreMatchers.*;
 
 public class getCategoryDetailsTest {
 
@@ -30,20 +29,33 @@ public class getCategoryDetailsTest {
 
 
     @When("the response status is {int}")
-    public void the_response_status_is(int status) {
+    public void the_response_status_is(int status) throws Exception{
 
-        validatableResponse.assertThat().statusCode(status);
+        try {
+
+            validatableResponse.assertThat().statusCode(status);
+        }catch (Exception e){
+            throw new Exception("the response failed to return status 200 and it returned a status " + status);
+        }
+
     }
 
 
-    @Then("the response will return name {string},canRelist {string} and description {string}")
-    public void the_response_will_return_name_can_relist_true_and_description(String name, String canRelist, String description) {
+    @Then("the response will return name (.*),canRelist (.*) and description (.*)$")
+    public void the_response_will_return_name_can_relist_true_and_description(String name, boolean canRelist, String description) throws Exception{
 
-        // validate Name value
-        validatableResponse.assertThat().body("Name",equalTo(name));
-        // validate CanRelist value
-        validatableResponse.assertThat().body("CanRelist",equalTo(canRelist));
-        //validate description value
-        validatableResponse.assertThat().body("Promotions.Description[1]",equalTo(description));
+     try{
+
+         // validate Name value
+         validatableResponse.assertThat().body("Name",equalTo(name));
+         // validate CanRelist value
+         validatableResponse.assertThat().body("CanRelist",equalTo(canRelist));
+         //validate description value
+         validatableResponse.assertThat().body(containsStringIgnoringCase(description));
+     } catch (Exception e){
+
+         throw new Exception(e.getMessage());
+     }
+
     }
 }

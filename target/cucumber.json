@@ -1,0 +1,85 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-09-08T12:18:38.872Z",
+        "line": 12,
+        "name": "Send a valid Request to get Categories details",
+        "description": "",
+        "id": "validation-of-get-method;send-a-valid-request-to-get-categories-details;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3040577000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I send a request to the URL to get categories details",
+            "match": {
+              "location": "StepDefination.getCategoryDetailsTest.i_send_a_request_to_the_url_to_get_categories_details()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 47525000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the response status is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefination.getCategoryDetailsTest.the_response_status_is(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 751321000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the response will return name Carbon credits,canRelist true and description Good position in category",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Carbon credits",
+                  "offset": 30
+                },
+                {
+                  "val": "true",
+                  "offset": 55
+                },
+                {
+                  "val": "Good position in category",
+                  "offset": 76
+                }
+              ],
+              "location": "StepDefination.getCategoryDetailsTest.the_response_will_return_name_can_relist_true_and_description(java.lang.String,boolean,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GetUserDetails"
+          }
+        ]
+      }
+    ],
+    "name": "Validation of get method",
+    "description": "",
+    "id": "validation-of-get-method",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/category.feature",
+    "tags": []
+  }
+]

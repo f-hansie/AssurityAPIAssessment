@@ -18,7 +18,7 @@ The Promotions element with Name = "Gallery" has a Description that contains the
 
 - > clone the project from https://github.com/f-hansie/AssurityAPIAssessment.git
 - > the test class to execute is located on this path: **src/test/java/TestRunner/CucumberRunnerTest.java**
-- > To run the test right click on the CucumberRunnerTest class and click run to execute
-- > Once the test has finished to execute check results on the Run console
+- > To run the test, please run the command on command line : [mvn clean install] 
+- > Once the test has finished, expand the target folder and expand the cucumber-report-html sub folder then click on overview-feature.html to view a detailed html report for all the steps that passed.
 
 

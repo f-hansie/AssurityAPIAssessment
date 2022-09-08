@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="4.18">
+    <testcase classname="Validation of get method" name="Send a valid Request to get Categories details" time="3.971">
+        <system-out><![CDATA[Given I send a request to the URL to get categories details.................passed
+When the response status is 200.............................................passed
+Then the response will return name Carbon credits,canRelist true and description Good position in category.passed
+]]></system-out>
+    </testcase>
+</testsuite>
